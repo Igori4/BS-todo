@@ -1,33 +1,201 @@
-.App {
-  text-align: center;
+body {
+    font-family: 'Open Sans', sans-serif;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+.greeting {
+    position: relative;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.close_todo-button {
+    cursor: pointer;
+    color: #80008099;
 }
 
-.App-link {
-  color: #61dafb;
+.close_todo-button:hover {
+    color: #800080fb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.modalWindow {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.clockTime {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.time {
+    margin: 0;
+    font-size: 63px;
+    color: #3c2f2f;
+}
+
+.greeting {
+    font-size: 35px;
+    font-weight: bold;
+    color: #59285cd1;
+    margin-bottom: 0;
+}
+
+.mainGoal {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 35%;
+    margin: auto;
+}
+
+.formMainGoal {
+    text-align: center;
+}
+
+.change_main_goal {
+    cursor: pointer;
+    margin-left: 30px;
+    color: #8c58a2;
+}
+
+.inputGoalOfDay, .get_user_name_form input {
+    border: 0;
+    border-bottom: 2px solid #8c58a2;
+    font-size: 15px;
+    outline: none;
+    margin-bottom: 10px;
+    color: #1c5200;
+}
+
+.todayGoalBlock p {
+    margin-top: 10px;
+    font-size: 20px;
+    color: #255418;
+}
+
+.todayGoalBlock h5 {
+    margin: 0;
+    color: #36210dc9;
+    font-size: 20px;
+}
+
+.ask_for_goal {
+    color: #244b18;
+    margin-bottom: 10px;
+}
+
+.first_greeting {
+    color: #7c4584;
+    font-size: 40px;
+}
+
+.modalWindow p {
+    font-size: 20px;
+    color: #186d18;
+    font-style: italic;
+}
+
+.item p {
+    margin: 0 20px;
+    font-size: 15px;
+}
+
+.todo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.show_todos {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    outline: none;
+    color: #267029;
+    border-bottom: 1px solid purple;
+}
+
+.show_todos:hover {
+    color: purple;
+    box-shadow: 0px 4px 7px 0px #2670289c;
+}
+
+.todo_form {
+    text-align: center;
+}
+
+.form_block {
+    padding: 10px;
+    width: 250px;
+    position: relative;
+    max-height: 300px;
+    min-height: 150px;
+    margin-top: 20px;
+    border-left: 2px solid #77d877;
+    border-bottom: 2px solid #77d877;
+    border-radius: 5px;
+    box-shadow: 1px 3px 9px 0px #00800094;
+}
+
+.removeTodo {
+    cursor: pointer;
+    border: none;
+    color: green;
+    background: none;
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    margin: auto;
+    color: #0e560e;
+    text-align: left;
+    font-style: italic;
+    padding: 4px 0;
+    border-bottom: 1px solid green;
+}
+
+.todo_input {
+    border: none;
+    border-bottom: 1px solid purple;
+    color: #19741d;
+    font-size: 15px;
+    padding: 0 5px 0;
+    font-style: italic;
+    outline: none;
+}
+
+ul {
+    padding: 0;
+}
+
+.todo_form h3 {
+    color: #3cb3718a;
+}
+
+.button_clear-all {
+    position: absolute;
+    top: 3px;
+    right: 0px;
+    font-style: italic;
+    cursor: pointer;
+    color: #008000a6;
+    font-size: 11px;
+    background: no-repeat;
+    border: none;
+}
+
+.button_clear-all:hover {
+    color: #04a004d7;
+    font-weight: bold;
+}
+
+.todo_checkbox {
+    cursor: pointer;
 }
