@@ -72,6 +72,7 @@ body {
 
 .todayGoalBlock p {
     margin-top: 10px;
+    padding-left: 30px;
     font-size: 20px;
     color: #255418;
 }
