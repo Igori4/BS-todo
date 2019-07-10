@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/BS-todo/static/css/main.814a0501.chunk.css",
+    "main.css": "/BS-todo/static/css/main.52eae999.chunk.css",
     "main.js": "/BS-todo/static/js/main.10141631.chunk.js",
     "main.js.map": "/BS-todo/static/js/main.10141631.chunk.js.map",
     "runtime~main.js": "/BS-todo/static/js/runtime~main.a207630c.js",
@@ -8,8 +8,8 @@
     "static/js/2.a5adb38c.chunk.js": "/BS-todo/static/js/2.a5adb38c.chunk.js",
     "static/js/2.a5adb38c.chunk.js.map": "/BS-todo/static/js/2.a5adb38c.chunk.js.map",
     "index.html": "/BS-todo/index.html",
-    "precache-manifest.a0d47a9d086bab4ef26e40f76379eda2.js": "/BS-todo/precache-manifest.a0d47a9d086bab4ef26e40f76379eda2.js",
+    "precache-manifest.4228a353c063b14236608aef05515eb4.js": "/BS-todo/precache-manifest.4228a353c063b14236608aef05515eb4.js",
     "service-worker.js": "/BS-todo/service-worker.js",
-    "static/css/main.814a0501.chunk.css.map": "/BS-todo/static/css/main.814a0501.chunk.css.map"
+    "static/css/main.52eae999.chunk.css.map": "/BS-todo/static/css/main.52eae999.chunk.css.map"
   }
 }
