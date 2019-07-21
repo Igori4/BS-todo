@@ -2,6 +2,12 @@ body {
     background-image: url(./images/bloom-blooming-caffeine-768943.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    width: 100%;
-    position: fixed;
+}
+
+
+@media (max-width: 991px) {
+    body {
+        background-image: url(./images/bloom-blooming-caffeine\ 680.jpg);
+        background-size: cover;
+    }
 }
