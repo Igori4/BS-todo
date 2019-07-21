@@ -1,5 +1,5 @@
 body {
-    font-family: 'Open Sans', sans-serif;
+    background-size: cover;
 }
 
 .greeting {
@@ -199,4 +199,37 @@ ul {
 
 .todo_checkbox {
     cursor: pointer;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    padding: 0 10px;
+}
+
+.footer-block {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-block p {
+    color: #9C27B0;
+    border-right: 2px solid #4CAF50;
+    padding-right: 10px;
+}
+
+@media (max-width: 750px) {
+    .form_block {
+        top: -240px;
+        background: #fffffff5;
+    }
+}
+
+@media (max-width: 540px) {
+    .mainGoal {
+        width: 75%;
+    }
+    .footer {
+        left: 35%;
+    }
 }
