@@ -1,20 +1,15 @@
 import React from 'react';
 import './App.css';
-import Greeting from './components/Greeting';
-import Todo from './components/Todo';
-import Footer from './components/Footer';
-
+import Footer from './components/footer/Footer';
+import Main from './components/main/Main';
 
 function App() {
   return (
     <>
-    <main>
-      <Greeting />
-      <Todo />
-    </main>
-    <Footer />
+      <Main />
+      <Footer />
     </>
-  )
-};
+  );
+}
 
 export default App;

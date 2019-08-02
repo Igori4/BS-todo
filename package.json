@@ -1,5 +1,5 @@
 {
-  "homepage" : "http://Igori4.github.io/Todo-for-bostC",
+  "homepage": "http://Igori4.github.io/BS-todo",
   "name": "todos",
   "version": "0.1.0",
   "private": true,
@@ -8,6 +8,7 @@
     "react-dom": "^16.8.6",
     "react-scripts": "3.0.1"
   },
+  "lint": "eslint src -c .eslintrc.json --ext js,jsx",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -30,5 +31,16 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "eslint-config-airbnb": "^17.1.1",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-import-resolver-webpack": "^0.11.1",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-plugin-react": "^7.14.3",
+    "prettier": "^1.18.2",
+    "pretty-quick": "^1.11.1"
   }
 }

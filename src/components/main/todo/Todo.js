@@ -6,61 +6,66 @@ class Todo extends React.Component {
     tempTodos: '',
     todos: [],
     showTodos: false,
-  }
+  };
 
-  handleChange = (event) => {
+  handleChange = event => {
     this.setState({
       tempTodos: event.target.value,
-    })
-  }
+    });
+  };
 
-  handleSubmit = (event) => {
+  handleSubmit = event => {
     let { tempTodos, todos } = this.state;
     let todoObject = {
       title: tempTodos,
       completed: false,
-      id: todos.length
+      id: Date.now(),
     };
 
     let copyTodos = [...todos];
-    copyTodos.push(todoObject)
+    copyTodos.push(todoObject);
 
     this.setState({
       todos: copyTodos,
-      tempTodos: ''
-    })
-    event.preventDefault()
-  }
+      tempTodos: '',
+    });
+    event.preventDefault();
+  };
 
-  completedTodo = (completedId) => {
+  completedTodo = completedId => {
     let cloneTodos = [...this.state.todos];
     cloneTodos.find(todo => {
-      if (todo.id === completedId) {
-        return todo.completed === false ? todo.completed = true : todo.completed = false;
+      if (todo.id !== completedId) {
+        return;
       }
-    })
+      return todo.completed === false
+        ? (todo.completed = true)
+        : (todo.completed = false);
+    });
     this.setState({
-      todos: cloneTodos
-    })
+      todos: cloneTodos,
+    });
+  };
 
-  }
-
-  handleRemoveTodo = (todoId) => {
+  handleRemoveTodo = todoId => {
     let copyTodos = [...this.state.todos];
     let updateTodos = copyTodos.filter(todo => todo.id !== todoId);
 
     this.setState({
       todos: updateTodos,
-    })
-  }
+    });
+  };
 
-  countOfUncompletedTodo = (todos) => todos.filter(todo => !todo.completed).length;
+  countOfUncompletedTodo = todos =>
+    todos.filter(todo => !todo.completed).length;
 
   clearAllTodos = () => this.setState({ todos: [] });
 
-  todoToggle = (isShown) => (
-    isShown ? this.setState({ showTodos: false }) : this.setState({ showTodos: true })
-  )
+  todoToggle = isShown => {
+   return isShown
+      ? this.setState({ showTodos: false })
+      : this.setState({ showTodos: true });
+  }
 
   render() {
     const { todos, tempTodos, showTodos } = this.state;
@@ -68,18 +73,19 @@ class Todo extends React.Component {
       <div className="todo">
         <button
           className="show_todos"
-          onClick={() => {
-            this.todoToggle(showTodos)
+          onClick={() => { 
+            this.todoToggle(showTodos);
           }}
         >
           TODO-LIST
         </button>
-        {showTodos ?
-          <div className="form_block" >
-            {todos.length ?
-              <button className="button_clear-all" onClick={this.clearAllTodos}>clear all</button>
-              : null
-            }
+        {showTodos ? (
+          <div className="form_block">
+            {todos.length ? (
+              <button className="button_clear-all" onClick={this.clearAllTodos}>
+                clear all
+              </button>
+            ) : null}
             <span
               className="close_todo-button"
               onClick={() => this.todoToggle(showTodos)}
@@ -87,7 +93,9 @@ class Todo extends React.Component {
               X
             </span>
             <form className="todo_form" onSubmit={this.handleSubmit}>
-              <h3><span>{this.countOfUncompletedTodo(todos)}</span> TO DO</h3>
+              <h3>
+                <span>{this.countOfUncompletedTodo(todos)}</span> TO DO
+              </h3>
               <input
                 title="maximum of characters is 17"
                 maxLength="17"
@@ -95,22 +103,21 @@ class Todo extends React.Component {
                 type="text"
                 className="todo_input"
                 value={tempTodos}
-                onChange={this.handleChange} />
+                onChange={this.handleChange}
+              />
             </form>
-            {todos.length ?
+            {todos.length ? (
               <TodoList
                 handleRemoveTodo={this.handleRemoveTodo}
                 todos={todos}
                 completedTodo={this.completedTodo}
               />
-              :
-              null}
+            ) : null}
           </div>
-          :
-          null}
+        ) : null}
       </div>
-    )
+    );
   }
-};
+}
 
 export default Todo;
